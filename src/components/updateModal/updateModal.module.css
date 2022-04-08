@@ -1,0 +1,262 @@
+.blurredBack {
+    position: fixed;
+    opacity: 0;
+    top: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    right: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #313131;
+    background: linear-gradient(135deg, #20202015, #20202023);
+    transition: all 0.8s cubic-bezier(0.71, -0.33, 0.45, 0.97);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  @supports (
+    (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+  ) {
+    .blurredBack {
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+  }
+  
+  @supports not (backdrop-filter: blur(10px)) {
+    .blurredBack {
+      background: linear-gradient(135deg, #202020d8, #202020f5) !important;
+    }
+  }
+  
+  .closeBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: #f0f0f0;
+    font-family: "Open Sans", sans-serif;
+    margin-right: 6.1vw;
+    font-size: 1.5rem;
+  }
+  
+  .workProperties {
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .workProperties p {
+    color: #f0f0f0;
+    font-size: 2rem;
+    font-family: "Open Sans", sans-serif;
+    margin: 15px 0 15px 0;
+    margin-bottom: -53px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .statusInput {
+    cursor: pointer;
+    width: 108% !important;
+  }
+  
+  .statusInput * {
+    background: linear-gradient(135deg, #20202015, #20202023) !important;
+    color: black;
+  }
+  
+  @supports (
+    (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+  ) {
+    .statusInput * {
+      backdrop-filter: blur(15px) !important;
+      -webkit-backdrop-filter: blur(15px) !important;
+    }
+  }
+  
+  @supports not (backdrop-filter: blur(10px)) {
+    .statusInput * {
+      background: linear-gradient(135deg, #202020d8, #202020f5) !important;
+    }
+  }
+  
+  .logoText {
+    margin-bottom: 15px !important;
+  }
+  
+  .addIcon {
+    color: #f0f0f0;
+    font-size: 17vw;
+    transform: translateY(-30px);
+  }
+  
+  .inputWrapper {
+    display: grid;
+    justify-items: center;
+  }
+  
+  .text {
+    width: 100%;
+    color: #f0f0f0;
+    position: relative;
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    background-color: transparent;
+    border: 1px solid #f0f0f000;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+    margin: 10px 0 10px 0;
+  }
+  
+  .text::placeholder {
+    opacity: 0.8 !important;
+    color: #f0f0f0;
+    font-weight: 100;
+  }
+  
+  .text:hover {
+    border-width: 5px;
+  }
+  
+  .text:focus {
+    border-radius: 15px;
+  }
+  
+  .error {
+    background-color: #ed4337;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    animation: slideIn 0.7s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .fileName {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #0f0f0f;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    animation: slideIn 0.7s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  label {
+    font-size: 1.5em;
+    padding: 10px 16px;
+    font-family: serif;
+    border: 1px solid #f0f0f0;
+    background-color: transparent;
+    color: #f0f0f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .file:focus + label,
+  .file + label:hover {
+    background-color: #f0f0f0;
+    color: #0f0f0f;
+    transform: scale(1.2);
+  }
+  
+  label:active,
+  .submit:active {
+    transform: scale(1) !important;
+    border-radius: 5px;
+    transition: all 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+  }
+  
+  .header {
+    color: #f3f3f3;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: clamp(30px, 4vw, 55px);
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .submit {
+    cursor: pointer;
+    background: #60c26000;
+    color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 15px;
+    font-family: "Open Sans", sans-serif;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .submit:hover {
+    background: #f0f0f0 !important;
+    transform: scale(1.2);
+    border: 1px solid #f0f0f000 !important;
+    color: #0f0f0f;
+  }
+  
+  .notificationArea {
+    position: absolute;
+    left: 3%;
+    bottom: 4%;
+  }
+  
+  @media (max-width: 800px) {
+    .addIcon {
+      display: none;
+    }
+    .notificationArea {
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+    .error, 
+    .fileName {
+      animation: show 0.7s ease-in-out !important;
+    }
+  }
+  
+  @keyframes show {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-30%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }

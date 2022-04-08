@@ -1,0 +1,32 @@
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardCheck {
+  background: #ffffff;
+  border: 1px solid #ffffff00;
+  border-radius: 40px;
+  font-family: "Nunito", sans-serif;
+  padding: 10px 45px 10px 45px;
+  color: #08080a;
+  font-size: clamp(16px, 1.5vw, 32px);
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.cardCheck:hover {
+  transition: all 0.2s ease-in-out;
+  background: #ffffff00;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .cardCheck {
+    padding: 5px 44px 5px 44px;
+    font-size: clamp(20px, 1.5vw, 32px);
+  }
+}

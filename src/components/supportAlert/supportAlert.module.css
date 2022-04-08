@@ -1,0 +1,84 @@
+.blurredBackground {
+  display: none;
+  position: fixed;
+  z-index: 1000000000;
+  border: 1px solid #313131;
+  background: linear-gradient(135deg, #20202015, #20202023);
+  transition: all 0.8s cubic-bezier(0.71, -0.33, 0.45, 0.97);
+  width: 100vw;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  animation: backgroundShow 0.4s ease-in-out;
+}
+
+@supports (
+  (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+  .blurredBackground {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+@supports not (backdrop-filter: blur(20px)) {
+  .blurredBackground {
+    background: linear-gradient(135deg, #202020d8, #202020f5) !important;
+  }
+}
+
+.header {
+  color: #f0f0f0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 4rem;
+  margin: 20px;
+  animation: show 1s ease-in-out;
+}
+
+.description {
+  color: #f0f0f0;
+  font-family: "Open Sans", sans-serif;
+  margin: 20px;
+  text-align: center;
+  animation: show 1s ease-in-out;
+}
+
+.buttonFunctionalWrapper {
+  display: contents;
+}
+
+/* pc not supported */
+@media (max-height: 635px) and (min-width: 801px) {
+  .blurredBackground {
+    display: grid;
+  }
+}
+
+/* mobile not supported */
+@media (max-height: 700px) and (max-width: 800px) {
+  .blurredBackground {
+    display: grid;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,57 @@
+.socialsWrapper {
+  margin: 20px;
+}
+
+.socials {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.headerWrapper {
+  position: relative;
+}
+
+.socialsHeader {
+  color: #f3f3f3;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  margin-left: 18px;
+  margin-bottom: 3px;
+  font-size: clamp(16px, 1.3vw, 32px);
+}
+
+.socialsHeader::before {
+  content: "";
+  background-color: #f3f3f3;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 3px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.socialsHeader {
+  font-size: clamp(14px, 1.15vw, 30px); /* overwriting size */
+}
+
+.buttonsWrapper {
+  margin-left: -5px;
+  margin-top: 10px;
+}
+
+.icon {
+  margin-right: 5px;
+  transform: translate(0, 10%);
+  mix-blend-mode: exclusion;
+}
+
+@media (max-width: 800px) {
+  .socialsWrapper {
+    margin: 0;
+  }
+
+  .socialsHeader {
+    font-size: clamp(17px, 1.8vw, 35px);
+  }
+}

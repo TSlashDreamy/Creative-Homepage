@@ -1,0 +1,28 @@
+.welcomeSection {
+  position: relative;
+}
+
+.welcomeDesc {
+  text-align: center;
+  color: #b9b9b9;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(15px, 1.25vw, 25px);
+  margin-top: clamp(20px, 3vw, 60px);
+}
+
+@media (min-width: 801px) {
+  .adaptiveArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .welcomeHeader {
+    font-size: 13vw;
+    margin-right: clamp(-30px, -5vw, -50px);
+  }
+
+  .welcomeDesc {
+    font-size: 1.2em;
+  }
+}

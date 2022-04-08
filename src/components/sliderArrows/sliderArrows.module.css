@@ -1,0 +1,101 @@
+.arrowsWrapper {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 92%;
+  width: 100%;
+}
+
+.scrollText {
+  color: #f0f0f0;
+  margin: 0;
+  font-weight: 100;
+}
+
+.leftArrowBox span,
+.rightArrowBox span {
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.leftArrowBox span {
+  transform: rotate(130deg);
+  animation: animateLeft 2s infinite;
+}
+
+.rightArrowBox span {
+  transform: rotate(-45deg);
+  animation: animateRight 2s infinite;
+}
+
+.leftArrowBox span:nth-child(2),
+.rightArrowBox span:nth-child(2) {
+  animation-delay: -0.25s;
+}
+.leftArrowBox span:nth-child(3),
+.rightArrowBox span:nth-child(3) {
+  animation-delay: -0.45s;
+}
+
+.arrowDot {
+  background-color: #f0f0f0;
+  width: 2px;
+  height: 2px;
+  border-radius: 5px;
+}
+
+.secondArrow {
+  border-bottom: 2px solid #f0f0f0;
+  border-right: 2px solid #f0f0f0;
+  width: 10px;
+  height: 10px;
+}
+
+.finalArrow {
+  border-bottom: 2px solid #f0f0f0;
+  border-right: 2px solid #f0f0f0;
+  width: 15px;
+  height: 15px;
+}
+
+@keyframes animateLeft {
+  0% {
+    opacity: 0;
+    transform: rotate(131deg) translateY(65%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(131deg) translate(30px, 35px) translateY(65%);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(131deg) translate(70px, 80px) translateY(65%);
+  }
+}
+
+@keyframes animateRight {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) translateY(-65%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(-45deg) translate(30px, 30px) translateY(-65%);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(70px, 70px) translateY(-65%);
+  }
+}
+
+@media (max-width: 800px) {
+  .arrowsWrapper {
+    display: flex;
+  }
+}

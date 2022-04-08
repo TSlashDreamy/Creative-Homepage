@@ -1,0 +1,51 @@
+.contactsCard {
+  position: relative;
+  display: grid;
+  background: linear-gradient(135deg, #20202015, #20202023);
+  width: 100vw;
+  margin: 13vw;
+  border-radius: 10px;
+  padding: 40px;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-items: center;
+}
+
+.waterMark {
+  display: none;
+  color: #404040;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  font-size: clamp(15px, 1vw, 25px);
+}
+
+@supports (
+  (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+  .contactsCard {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .contactsCard {
+    background: linear-gradient(135deg, #20202063, #202020ad);
+  }
+}
+
+@media (max-width: 800px) {
+  .contactsCard {
+    margin: 10vw;
+    padding: 0;
+    backdrop-filter: none !important;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .waterMark {
+    display: flex;
+  }
+}

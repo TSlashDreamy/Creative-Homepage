@@ -1,0 +1,104 @@
+.card {
+  width: 22vw;
+  height: 30vw;
+  min-width: 250px;
+  min-height: 350px;
+  background: linear-gradient(135deg, #20202009, #20202015);
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+  margin: 10px;
+  border-radius: 10px;
+  margin: 10px 5vw 10px 5vw;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+  overflow: hidden;
+  border: 1px solid #8a8a8a00;
+  user-select: none;
+}
+
+.card:hover {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+  border: 1px solid #1b1b1b;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.777);
+}
+
+.contentWrapper {
+  margin: 15px;
+  height: 90%;
+  display: grid;
+  align-content: space-between;
+}
+
+.type {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.type .text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: clamp(16px, 1.3vw, 32px);
+  color: #cfcccc;
+  margin-left: 15px;
+  margin-top: 0;
+}
+
+.type .text::before {
+  content: "";
+  background: #ffffff;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border-radius: 100px;
+}
+
+.square {
+  width: clamp(24px, 1.7vw, 55px);
+  height: clamp(24px, 1.7vw, 55px);
+  border-radius: 3px;
+  background-color: #ffffff;
+  float: right;
+  margin: 0;
+}
+
+.cirlce {
+  width: clamp(24px, 1.7vw, 55px);
+  height: clamp(24px, 1.7vw, 55px);
+  border-radius: 100%;
+  background-color: #ffffff;
+  float: right;
+  margin: 0;
+}
+
+@supports (
+  (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+  .card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .card {
+    background: linear-gradient(135deg, #20202063, #202020ad);
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    height: 235px;
+    min-height: 235px;
+    width: auto;
+    min-width: 250px;
+    margin: 10px 0vw 10px 0vw;
+  }
+
+  .contentWrapper {
+    align-content: space-evenly;
+  }
+}

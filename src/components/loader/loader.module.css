@@ -1,0 +1,45 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+    animation: appear 1s ease-in-out;
+}
+
+.text {
+  font-family: 'Open Sans';
+    font-weight: 100;
+    color: #f0f0f0;
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+@supports (
+  (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+    .background {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+@supports not (backdrop-filter: blur(20px)) {
+    .background {
+    background: linear-gradient(135deg, #202020d8, #202020f5) !important;
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

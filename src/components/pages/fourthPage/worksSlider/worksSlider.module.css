@@ -1,0 +1,223 @@
+.mainSliderContainer {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.sliderIcon {
+  color: #f3f3f3;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sliderIcon.left {
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.sliderIcon.right {
+  right: 0;
+}
+
+.card {
+  display: inline-block;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.addWorkCard {
+  display: inline-block;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  width: 27vw;
+  height: clamp(200px, 14vw, 240px);
+  background: linear-gradient(135deg, #20202015, #20202023);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@supports (
+  (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+  .addWorkCard {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .addWorkCard {
+    background: linear-gradient(135deg, #20202063, #202020ad);
+  }
+}
+
+.paginationWrapper {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -5%;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+.paginationEmpty {
+  background-color: #191919;
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.paginationFull {
+  background-color: #ffffff;
+  height: 5px;
+  width: 3%;
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@media (max-width: 800px) {
+  .sliderIcon {
+    display: none;
+  }
+
+  .slider {
+    display: grid;
+    gap: 20px 20px;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      ". ."
+      ". .";
+  }
+
+  .card {
+    margin: 0 4vw 0 4vw;
+  }
+
+  .paginationWrapper {
+    display: none;
+  }
+}
+
+.workCard {
+  width: 27vw;
+  height: clamp(200px, 14vw, 240px);
+  background: linear-gradient(135deg, #20202015, #20202023);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-items: end;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@supports (
+  (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+  .workCard {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .workCard {
+    background: linear-gradient(135deg, #20202063, #202020ad);
+  }
+}
+
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, #fcc15b38, #f52c2e38, #8942ad38);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.workCard:hover .cardBackground {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 1;
+}
+
+.addButton {
+  background: transparent;
+  border: 1px solid #f0f0f0;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: #f0f0f0;
+  font-size: 2em;
+  font-family: initial;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.addButton:hover {
+  background: #f0f0f0;
+  border: 0px solid #f0f0f0;
+  color: #0f0f0f;
+  transform: scale(1.2);
+}
+
+.addButton:active {
+  transform: scale(1);
+  background: #d1d1d1;
+  border-radius: 5px;
+  transition: all 0.05s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@media (max-width: 800px) {
+  .workCard {
+    width: 85vw;
+  }
+}

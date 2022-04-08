@@ -1,0 +1,6 @@
+.myWorksWrapper {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  justify-content: left;
+}

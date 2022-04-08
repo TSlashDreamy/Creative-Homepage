@@ -1,0 +1,31 @@
+.textWrapper {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .textWrapper {
+    justify-content: start;
+    margin-bottom: 5px;
+    margin-top: 25px;
+  }
+
+  .preDescription {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: clamp(17px, 1.4vw, 32px);
+    color: #cfcccc;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .descriptionHeader {
+    color: #f3f3f3;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: clamp(40px, 5vw, 65px);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

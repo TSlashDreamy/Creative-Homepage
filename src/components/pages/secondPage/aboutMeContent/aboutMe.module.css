@@ -1,0 +1,119 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logoBackground {
+  background: linear-gradient(135deg, #20202009, #20202015);
+  position: relative;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 35vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+.mobileLogoBackground {
+  background: linear-gradient(135deg, #20202009, #20202015);
+  position: relative;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 35vw;
+  display: none;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+@supports (
+  (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+  .logoBackground {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .logoBackground {
+    background: linear-gradient(135deg, #20202063, #202020ad);
+  }
+}
+
+.avatar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  align-self: center;
+  width: 35vw;
+  margin-left: 40px;
+}
+
+.descriptionName {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: clamp(16px, 1.3vw, 32px);
+  color: #cfcccc;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.aboutText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: clamp(16px, 1.3vw, 32px);
+  color: #f3f3f3;
+  margin-top: 25px;
+  margin-bottom: 65px;
+}
+
+h2 {
+  color: #f3f3f3;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(30px, 4vw, 55px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .logoBackground {
+    display: none;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  .description {
+    width: 100vw;
+    margin: 10vw;
+  }
+
+  .descriptionName {
+    font-size: clamp(20px, 1.4vw, 32px);
+  }
+
+  .greetHeader {
+    font-size: clamp(40px, 5vw, 65px);
+  }
+
+  .mobileLogoBackground {
+    display: flex;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .aboutText {
+    font-size: clamp(20px, 1.4vw, 32px);
+    margin-bottom: 25px;
+  }
+}

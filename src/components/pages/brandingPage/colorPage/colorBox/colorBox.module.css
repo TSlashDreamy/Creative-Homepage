@@ -1,0 +1,34 @@
+.colorBox {
+  width: 15vw;
+  height: 40px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff00;
+  mix-blend-mode: exclusion;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.copied {
+  color: #ffffff !important;
+  transform: scale(1.2) translate(-50%, -50%);
+}
+
+.notCopied {
+  color: #ffffff00 !important;
+  transform: scale(1) translate(-50%, -50%);
+}
+
+@media (max-width: 800px) {
+  .colorBox {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

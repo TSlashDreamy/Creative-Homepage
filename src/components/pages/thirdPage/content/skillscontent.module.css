@@ -1,0 +1,25 @@
+.wrapper {
+  margin-top: 70px;
+}
+
+.wrapper p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: clamp(16px, 1.3vw, 32px);
+  color: #cfcccc;
+  margin-bottom: 0;
+}
+
+.cardWrapper {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    margin: 10vw;
+  }
+
+  .cardWrapper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,12 @@
+.logoElement {
+  width: 8vw;
+  fill: #f0f0f0;
+  transform: rotate(35deg);
+}
+
+@media (max-width: 800px) {
+  .logoElement {
+    width: 15vw;
+    max-width: 90px;
+  }
+}

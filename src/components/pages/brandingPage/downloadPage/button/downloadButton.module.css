@@ -1,0 +1,84 @@
+.button {
+  position: relative;
+  background: transparent;
+  border: 3px solid #c1c1c1;
+  border-radius: 40px;
+  font-family: "Open Sans", sans-serif;
+  padding: clamp(7px, 0.6vw, 10px) clamp(50px, 3vw, 70px)
+    clamp(7px, 0.6vw, 10px) clamp(50px, 3vw, 70px);
+  margin: 10px;
+  color: #e5dcdc;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: normal;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  cursor: pointer;
+  user-select: none;
+}
+
+.buttonContent {
+  mix-blend-mode: exclusion;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.button:active::after {
+  background: #1c1d21;
+  transition: all 0s ease-in-out;
+}
+
+.button:hover > .buttonContent {
+  color: #e5dcdc00;
+}
+
+.button:hover {
+  border: 3px solid #c1c1c100;
+}
+
+.button::after {
+  content: "";
+  border-radius: 40px;
+  background: #e5dcdc;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.button:hover::after {
+  height: 100%;
+  top: 0%;
+}
+
+.button:hover > .icon {
+  color: white;
+  margin: 0;
+  left: -50%;
+  transform: translateX(50%);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.icon {
+  color: #e5dcdc;
+  position: relative;
+  left: 0;
+  top: calc(50% - 10px); /* centering icon */
+  margin-left: 10px;
+  mix-blend-mode: exclusion;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.button:active > .icon {
+  transition: all 0s ease-in-out;
+  top: calc(50%);
+}
+
+@media (max-width: 800px) {
+  .button {
+    padding: clamp(7px, 0.6vw, 10px) clamp(25px, 3vw, 70px)
+      clamp(7px, 0.6vw, 10px) clamp(25px, 3vw, 70px);
+    font-size: 1em;
+  }
+}

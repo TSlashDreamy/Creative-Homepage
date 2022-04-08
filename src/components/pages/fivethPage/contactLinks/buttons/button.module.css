@@ -1,0 +1,53 @@
+.contactLink {
+  color: #f3f3f3;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: clamp(16px, 1.2vw, 30px);
+  border-radius: 100px;
+  background-color: transparent;
+  border: 2px solid #f3f3f3;
+  padding: 3px 20px 3px 20px;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  position: relative;
+}
+
+.contactLink::before {
+  content: "";
+  background-color: #f0f0f0;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 0;
+  height: 100%;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  border-radius: 100%;
+  mix-blend-mode: exclusion;
+}
+
+.contactLink:hover:before {
+  width: 100%;
+  border-radius: 100px;
+  left: 0%;
+}
+
+.contactLink:hover {
+  border: 2px solid #f3f3f300;
+}
+
+@media (max-width: 800px) {
+  .contactLink span {
+    display: none;
+  }
+
+  .contactLink svg {
+    margin: 0;
+    padding: 3px;
+    font-size: clamp(20px, 2vw, 50px);
+  }
+
+  .contactLink {
+    padding: 4px 33px 4px 33px;
+  }
+}

@@ -1,0 +1,55 @@
+.logo {
+  width: min(10vw, 60px);
+  cursor: pointer;
+  margin-right: auto;
+  fill: #f0f0f0;
+  stroke-width: 10px;
+  stroke: #f0f0f0;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo .cls3 {
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.logo:hover .cls3 {
+  fill: transparent;
+  stroke: url(#col1);
+  stroke-width: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo .cls1 {
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.logo:hover .cls1 {
+  fill: transparent;
+  stroke: url(#col2);
+  stroke-width: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.logo .cls2 {
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.logo:hover .cls2 {
+  fill: transparent;
+  stroke: url(#col3);
+  stroke-width: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  .logo:hover .cls3,
+  .logo:hover .cls2,
+  .logo:hover .cls1 {
+    fill: #f0f0f0;
+    stroke-width: 10px;
+    stroke: #f0f0f0;
+  }
+}

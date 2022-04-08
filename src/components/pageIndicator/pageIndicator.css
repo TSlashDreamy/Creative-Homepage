@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("http://fonts.cdnfonts.com/css/trueno");
+
+.pageIndicator {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.pageIndicator .sectionIndicator {
+  width: 13px;
+  height: 13px;
+  background: #4d4b4b;
+  border-radius: 50%;
+  margin: 0px;
+  margin-left: 5px;
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.pageIndicator .sectionIndicator:hover {
+  background: #8a8585;
+  transform: translateX(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
+.pageIndicator .sectionIndicator:hover {
+  background: #8a8585;
+  transform: translateX(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
+.contentWrapper:hover > .sectionName {
+  color: #8a8585;
+  margin-right: -20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pageIndicator div:hover {
+  color: #8a8585;
+}
+
+.pageIndicator .sectionIndicator.selected {
+  background: #f3f3f3;
+  transform: none !important;
+  cursor: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.pageIndicator div {
+  display: inline-flex;
+  position: relative;
+  float: right;
+  margin: 0;
+}
+
+.sectionName,
+.sectionNum {
+  margin: 0;
+  user-select: none;
+}
+
+.sectionName {
+  color: #f3f3f300;
+  margin-right: 5px;
+  font-size: 0.7em;
+  display: flex;
+  align-self: center;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionNum {
+  color: #f3f3f300;
+  display: flex;
+  align-self: center;
+  font-family: "Trueno 100", sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+  padding: 0 3px 0 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionNum::before {
+  content: "";
+  background-color: #f3f3f300;
+  width: 1px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 7px;
+}
+
+.sectionNum.selected::before {
+  background-color: #f3f3f3;
+  transition: all 0.2s ease-in-out;
+}
+
+.sectionName.selected,
+.sectionNum.selected {
+  color: #f3f3f3 !important;
+  transition: all 0.2s ease-in-out;
+  margin-right: 5px !important;
+}
+
+@media (max-width: 800px) {
+  .pageIndicator {
+    display: none;
+  }
+}

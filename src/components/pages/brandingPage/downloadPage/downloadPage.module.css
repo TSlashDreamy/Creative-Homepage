@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("http://fonts.cdnfonts.com/css/trueno");
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sectionHeader {
+  width: 100%;
+}
+
+.sectionHeader h2 {
+  text-align: center;
+}
+
+.typeWrapper {
+  position: relative;
+  margin-left: 12vw;
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 12vw;
+}
+
+.sectionHeader p {
+  color: #f0f0f0;
+  font-weight: 100;
+  margin-left: 15px;
+}
+
+.sectionHeader p::before {
+  content: "";
+  background-color: #f0f0f0;
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  left: 0px;
+}
+
+.copyright {
+  color: #404040;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  font-size: clamp(10px, 0.8vw, 20px);
+  margin-left: 12vw;
+}
+
+@media (max-width: 800px) {
+  .sectionHeader {
+    margin-top: 50px;
+  }
+
+  .sectionHeader h2 {
+    font-size: clamp(35px, 4vw, 55px);
+  }
+
+  .typeWrapper p {
+    font-size: 1.2em;
+  }
+}

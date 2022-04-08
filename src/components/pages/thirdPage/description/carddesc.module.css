@@ -1,0 +1,18 @@
+.typeHeader {
+  font-size: clamp(30px, 3vw, 55px);
+}
+
+.cardDescription {
+  font-size: clamp(55px, 5vw, 70px);
+}
+
+@media (max-width: 800px) {
+  .typeDescription {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: clamp(17px, 1.4vw, 32px);
+    color: #cfcccc;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
