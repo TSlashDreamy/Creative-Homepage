@@ -1,0 +1,23 @@
+import Ambient from "./sounds/VikaAmbient.mp3";
+import MenuIn from "./sounds/menuIn.mp3";
+import MenuOut from "./sounds/menuOut.mp3";
+import Click from "./sounds/click.mp3";
+import LinkClick from "./sounds/linkClick.mp3";
+import Hover from "./sounds/hover.mp3";
+import LinkHover from "./sounds/linkHover.mp3";
+import ChangeLang from "./sounds/clickButton.mp3";
+import PickedColor from "./sounds/picked.mp3";
+import ErrorTrigger from "./sounds/error.mp3";
+import Success from "./sounds/success.mp3";
+
+export const AmbientSound = Ambient;
+export const MenuInSound = MenuIn;
+export const MenuOutSound = MenuOut;
+export const ClickSound = Click;
+export const LinkClickSound = LinkClick;
+export const HoverSound = Hover;
+export const LinkHoverSound = LinkHover;
+export const ChangeLangSound = ChangeLang;
+export const PickedColorSound = PickedColor;
+export const ErrorSound = ErrorTrigger;
+export const SuccessSound = Success;
