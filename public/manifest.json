@@ -1,0 +1,25 @@
+{
+  "short_name": "/TSlash",
+  "name": "Portfolio of developer /TSlash",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/TSlashDreamy/tslashdreamy.github.io/038831192ea41bbc8191941edeed6be2fa1c4fc2/logo.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/TSlashDreamy/tslashdreamy.github.io/038831192ea41bbc8191941edeed6be2fa1c4fc2/logo.svg",
+      "type": "image/svg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/TSlashDreamy/tslashdreamy.github.io/038831192ea41bbc8191941edeed6be2fa1c4fc2/logo.svg",
+      "type": "logo/svg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0f0f0f",
+  "background_color": "#f0f0f0"
+}

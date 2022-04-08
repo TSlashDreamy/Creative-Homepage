@@ -1,0 +1,128 @@
+{
+    "Loading": "/TSlash | Портфоліо",
+
+    "warning_header": "О, ні...",
+    "warning_description": "На жаль, додаток не підтримує Ваше розширення екрану, воно може викликати візуальні баги всередині додатку.",
+    "warning_button": "Все одно продовжити",
+
+    "modal_svgError": "Будь-ласка, використовуйте лише .svg файли!",
+    "modal_nameError": "Ви не заповнили поле 'Назва'!",
+    "modal_statusError": "Ви не обрали стан",
+    "modal_urlError": "Ви не заповнили поле 'URL'!",
+    "modal_frameworksError": "Ви не заповнили поле 'Frameworks'!",
+    "modal_logoError": "Ви не обрали логотип!",
+    "modal_connectionError": "Відсутнє з'єднання з інтернетом",
+    "modal_header": "Додайте нову роботу",
+    "modal_namePlaceholder": "Назва",
+    "modal_statusPlaceholder": "Стан",
+    "modal_urlPlaceholder": "URL",
+    "modal_frameworkPlaceholder": "Фреймворки",
+    "modal_logoText": "Логотип",
+    "modal_pickedFile": "Обраний файл: ",
+    "modal_buttonContent": "Додати",
+    "modal_active": "Активний",
+    "modal_done": "Завершений",
+    "modal_inDevelopment": "У Розробці",
+
+    "confirmation_header": "Ви впевнені?",
+    "confirmation_description": "Після видалення роботи, Ви більше не зможете повернути її назад. Видалити роботу?",
+    "confirmation_cancel": "Відмінити",
+    "confirmation_delete": "Видалити",
+
+    "update_header": "Редагування роботи",
+    "update_button": "Оновити",
+
+    "firebase_creatingTimestamp": "Запам'ятовую день...",
+    "firebase_loading:": "Будь-ласка, почекайте...",
+
+    "language": "Українська",
+
+    "scroll_arrow": "Гортайте Вниз",
+
+    "swipe_arrow": "Гортайте",
+
+    "menu": "Меню",
+    "home": "Головна",
+
+    "cards": "Карточок",
+
+    "navbar_branding": "Брендинг",
+    "navbar_contacts": "Контакти",
+
+    "backHeader": "Назад",
+
+    "owner_login": "Увійти як власник",
+    "owner_confirmed": "Вхід підтверджено",
+    "owner_email_sended": "Ми відправили посилання для входу на електронну пошту власника. Тепер Ви можете закрити цю сторінку.",
+
+    "indicator_welcome": "Привіт",
+    "indicator_about_me": "Про мене",
+    "indicator_my_skills": "Мої вміння",
+    "indicator_my_works": "Мої роботи",
+    "indicator_contacts": "Контакти",
+
+    "welcome_description": "Ми робимо Ваші бажання реальними",
+    "welcome_button": "Поговоримо?",
+
+    "about_me_predescription": "Про мене",
+    "about_me_greetings": "Привіт! Я TSlash.",
+    "about_me_description": "Або ж просто звіть мене Тарас, я Front-End/BackEnd розробник і цифровий UI/UX дизайнер. Давайте працювати разом.",
+    "about_me_button": "Контакти",
+
+    "my_skills_predescription": "Мої вміння",
+    "my_skills_header": "Що я можу?",
+    "my_skills_hard_card_description": "Це навички, які работодавець може перевірити, наприклад, знання програмування або іноземної мови.",
+    "my_skills_soft_card_description": "Вони зазвичай представляють собою навички спілкування, які дозволяють добре працювати з людьми.",
+    "my_skills_card_type": "Тип",
+    "my_skills_card_button": "Глянути",
+
+    "my_works_counter_description_fl": "Робіт зроблено",
+    "my_works_counter_description_sl": "Тут знаходяться всі мої роботи",
+    "my_works_type": "Тип",
+
+    "contacts_predescription": "Залишаємось на зв'язку",
+    "contacts_header": "Зв'яжіться зі мною",
+    "contacts_description": "Нехай це буде початком чогось нового, унікального, видатного і єдиного в своєму роді. Ми реалізуємо будь-яку ідею у вашій голові в реальність. Давайте познайомимось!",
+    "contacts_socials_header": "Соц. мережі",
+    "contacts_messangers_header": "Месенджери",
+    "contacts_emails_header": "Пошта",
+
+    "egg": "",
+
+    "branding_first_header": "Брендинг",
+    "branding_first_sectionName": "Типографіка",
+    "branding_first_primaryFont": "Основний",
+    "branding_first_secondaryFont": "Вторинний",
+    "branding_first_weight": "Товщина",
+    "branding_first_fontFProperties": "Звичайний, Середній, Жирний",
+    "branding_first_fontSProperties": "Тонкий, Жирний",
+
+    "branding_second_header": "Кольори",
+    "branding_second_mainPalette": "Основна палітра",
+    "branding_second_gradientPalette": "Градієнтна палітра",
+
+    "branding_third_header": "Логотип та шаблон",
+    "branding_third_Fsection": "Вихідники логотипу",
+    "branding_third_Ssection": "Вихідники шаблону",
+    "branding_third_Tsection": "Вихідники Веб-Додатку",
+
+    "modal_addYour": "Додайте Ваш",
+    "cards_add": "Додати вміння +",
+    "cards_learned": "Вивчили щось нове?",
+    "hardskills_markup": "Мова Гіпертекстової Розмітки",
+    "hardskills_styling": "Мова Опису Зовнішнього Вигляду",
+    "hardskills_programming": "Мова Програмування",
+    "hardskills_progPlatform": "JS Оточення",
+    "hardskills_jsLib": "JS Бібліотека",
+    "hardskills_framework": "Фреймворк",
+    "hardskills_cloud": "Хмарне сховище",
+    "hardskills_verControl": "Система Контролю Версій",
+    "hardskills_IDE": "Серидовище розробки",
+    "hardskills_desUtilities": "Утиліти Дизайну",
+
+    "softskills_communication": "Комунікації",
+    "softskill_managment": "Менеджмент",
+
+    "404_desc": "От халепа... Ми не змогли знайти цю сторінку",
+    "404_button": "На головну"
+}
