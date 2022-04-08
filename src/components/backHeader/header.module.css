@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.logoLink {
+  margin-left: auto;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 4.5%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 23px;
+}
+
+.navList li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navLinks {
+  color: #cfcccc;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+.navLinks:hover {
+  color: #f3f3f3;
+}
+
+.navLinks::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  background-color: #6d6d6d;
+  height: 1.5px;
+  width: 0;
+  transition: all 0.3s ease 0s;
+  pointer-events: none;
+}
+
+.navLinks:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.viewArrow {
+  font-size: 19px;
+  margin-right: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.mobileContainer {
+  position: relative;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 23px;
+}
+
+.mobileLogo {
+  margin-left: auto;
+  margin-right: none;
+}
+
+.checkBox,
+.hamburgerMenu {
+  width: 32px;
+  height: 32px;
+}
+
+.checkBox {
+  position: absolute;
+  display: none;
+  height: 32px;
+  width: 32px;
+  top: 50px;
+  right: 5.2%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hamburgerMenu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  border-radius: 0px;
+  padding: 5px;
+}
+
+.firstLine {
+  width: 50%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  mix-blend-mode: exclusion;
+  align-self: flex-end;
+  z-index: 4;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.secondLine {
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  mix-blend-mode: exclusion;
+  z-index: 4;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.thirdLine {
+  width: 50%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+  mix-blend-mode: exclusion;
+  z-index: 4;
+  align-self: flex-start;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.container input[type="checkbox"]:checked ~ .hamburgerMenu .firstLine {
+  transform: rotate(-45deg);
+  width: 47%;
+}
+
+.container input[type="checkbox"]:checked ~ .hamburgerMenu .secondLine {
+  transform: rotate(45deg);
+}
+
+.container input[type="checkbox"]:checked ~ .hamburgerMenu .thirdLine {
+  transform: rotate(-45deg);
+  width: 47%;
+}
+
+.container input[type="checkbox"]:checked ~ .hamburgerMenu {
+  background-color: #f0f0f0;
+  border-radius: 11px;
+}
+
+.navMenu {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/public/mobileBack/Background.svg");
+  background-size: cover;
+  border-top-right-radius: 100% 10%;
+  left: 0vw;
+  top: 100vh;
+  transition: all 1s cubic-bezier(0.61, -0.27, 0.26, 1.22);
+}
+
+.menuHeader {
+  color: #0f0f0f;
+  font-weight: 100;
+  font-size: 3em;
+  text-align: center;
+}
+
+.mobileNavList {
+  list-style: none;
+  position: relative;
+}
+
+.mobileNavLinks {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #0f0f0f;
+  font-weight: 400;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+
+.mobileNavList li {
+  margin: 15px 0 15px 0;
+}
+
+.mobileNavLinks::before {
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  position: absolute;
+  background-color: #0f0f0f;
+  width: 20px;
+  height: 2px;
+  border-radius: 3px;
+}
+
+.mobileNavLinks::after {
+  content: "";
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  position: absolute;
+  background-color: #0f0f0f;
+  width: 20px;
+  height: 2px;
+  border-radius: 3px;
+}
+
+.lang {
+  font-size: 1em !important;
+}
+
+@media (max-width: 800px) {
+  .logoLink {
+    display: none;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .mobileContainer {
+    display: flex;
+  }
+
+  .navList {
+    padding-left: 0;
+  }
+
+  .checkBox {
+    display: block;
+  }
+  .hamburgerMenu {
+    display: flex;
+  }
+}

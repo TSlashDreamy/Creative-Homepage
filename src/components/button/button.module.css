@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+.btn {
+  background: transparent;
+  border: 3px solid #c1c1c1;
+  border-radius: 40px;
+  font-family: "Open Sans", sans-serif;
+  padding: clamp(7px, 0.6vw, 10px) clamp(60px, 5vw, 70px)
+    clamp(7px, 0.6vw, 10px) clamp(60px, 5vw, 70px);
+  margin: 0;
+  color: #e5dcdc;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: normal;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  cursor: pointer;
+}
+
+.btnAboutMe {
+  background: transparent;
+  border: 3px solid #c1c1c1;
+  border-radius: 40px;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 70px 10px 70px;
+  color: #e5dcdc;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: normal;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  background: #20202000;
+  cursor: pointer;
+}
+
+.btn::after {
+  content: "";
+  background: #6d6d6d00;
+  height: 1px;
+  width: 10%;
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translate(-50%, -3px);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  pointer-events: none;
+}
+
+.btn:hover:after {
+  bottom: -3px;
+  background: #6d6d6d;
+  transform: translate(-50%, -3px);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.dangerBtn {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 3px solid #ed4337;
+  color: #ed4337;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+  animation: show 1s ease-in-out !important;
+  text-align: center !important;
+}
+
+.dangerBtn:hover:after {
+  background: #ed4337;
+  transform: translate(-50%, -1px) !important;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.dangerBtn::after {
+  background: #ed433700;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  pointer-events: none;
+}
+
+.dangerBtn:hover {
+  border: 0px solid #ed433700 !important;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+}
+
+.btnContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(10px, 3vw, 50px);
+}
+
+.btnContainerAboutMe {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: -5px;
+}
+
+.btn:hover {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  border: 0px solid #c1c1c100;
+  letter-spacing: 7px;
+  padding: clamp(10px, 0.6vw, 10px) clamp(10%, 10vw, 30%)
+    clamp(10px, 0.6vw, 10px) clamp(10%, 10vw, 30%);
+}
+
+.btnAboutMe:hover {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform: translateY(-3px);
+  background: #2020208c;
+}
+
+@media (max-width: 800px) {
+  .btn {
+    padding: clamp(7px, 0.6vw, 10px) clamp(80px, 7vw, 100px)
+      clamp(7px, 0.6vw, 10px) clamp(80px, 7vw, 100px);
+  }
+
+  .btnContainerAboutMe {
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .btnAboutMe {
+    padding: 10px 27vw 10px 27vw;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
