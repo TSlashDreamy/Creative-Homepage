@@ -48,9 +48,7 @@ Install project with npm
 
 > What frameworks and libraries used
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" width="48" alt="Firebase">
-
-[**React**](https://ru.reactjs.org/)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" width="48" alt="Firebase"> [**React**](https://ru.reactjs.org/)
 
 <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/firebase-48.png" width="48" alt="Firebase">
 
