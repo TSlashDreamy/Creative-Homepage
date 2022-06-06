@@ -1,12 +1,7 @@
 import style from "./worksCard.module.css";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { useState, useRef } from "react";
-import {
-  MdOutlineDelete,
-  MdOutlineEdit,
-  MdExpandMore,
-  MdOutlineClose,
-} from "react-icons/md";
+import { MdOutlineDelete, MdOutlineEdit } from "react-icons/md";
 import { Howl } from "howler";
 import {
   HoverSound,
@@ -106,9 +101,6 @@ const WorksCard = (props) => {
           }
           className={style.editMenu}
         >
-          <div onClick={ShowEditMenu} className={style.closeBtn}>
-            <MdOutlineClose />
-          </div>
           <button
             onMouseOver={ChangeBackRed}
             onMouseLeave={ClearStyle}
@@ -153,11 +145,6 @@ const WorksCard = (props) => {
         className={style.status}
       >
         <span>{props.status}</span>
-        {user && (
-          <div onClick={ShowEditMenu} className={style.mobileOption}>
-            <MdExpandMore />
-          </div>
-        )}
       </div>
       <div
         style={
