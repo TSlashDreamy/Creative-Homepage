@@ -36,6 +36,16 @@ function pageSpy() {
     [background.bottomPos4, background.leftPos4, background.rightPos4],
   ];
 
+  function checkHashRoutingValidity() {
+    let currentUrl = window.location.href;
+    if (!currentUrl.includes("#")) {
+      window.history.pushState({}, null, currentUrl + "#/");
+    } else {
+      return;
+    }
+  }
+  checkHashRoutingValidity();
+
   // removing object old position
   function removePos() {
     for (let i = 0; i < 5; i++) {
@@ -103,7 +113,7 @@ function pageSpy() {
     );
     if (
       newRedactedUrl === "/" ||
-      newLink === "https://tslashdreamy.github.io"
+      newLink === "https://tslashdreamy.github.io/#/"
     ) {
       const navigation = document.querySelector(".pageIndicator"); // getting indicator element
 
@@ -150,7 +160,7 @@ function pageSpy() {
     );
     if (
       newRedactedUrl === "/" ||
-      newLink === "https://tslashdreamy.github.io"
+      newLink === "https://tslashdreamy.github.io/#/"
     ) {
       try {
         linkAllElement();

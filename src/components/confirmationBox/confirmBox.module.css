@@ -1,6 +1,6 @@
 .background {
     position: fixed;
-    z-index: 100000;
+    z-index: 10000000000;
     border: 1px solid #313131;
     background: linear-gradient(135deg, #20202015, #20202023);
     transition: all 0.8s cubic-bezier(0.71, -0.33, 0.45, 0.97);
